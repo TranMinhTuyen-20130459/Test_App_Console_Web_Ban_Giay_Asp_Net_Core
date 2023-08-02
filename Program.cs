@@ -23,7 +23,8 @@ namespace Test_App_Console
                 //new DataBrand().AddDataToTable(dbContext);
                 //new DataTypeProduct().AddDataToTable(dbContext);
 
-                new DataSize().AddDataToTable(dbContext);
+                //new DataSize().AddDataToTable(dbContext);
+                new DataPriceRange().AddDataToTable(dbContext);
             }
 
             Console.ReadKey();
