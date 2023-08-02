@@ -20,11 +20,15 @@ namespace Test_App_Console
             using (var scope = serviceProvider.CreateScope())
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<MyDbContext>();
+
                 //new DataBrand().AddDataToTable(dbContext);
                 //new DataTypeProduct().AddDataToTable(dbContext);
 
                 //new DataSize().AddDataToTable(dbContext);
-                new DataPriceRange().AddDataToTable(dbContext);
+                //new DataPriceRange().AddDataToTable(dbContext);
+
+                new DataProduct().AddDataToTable(dbContext);
+
             }
 
             Console.ReadKey();
