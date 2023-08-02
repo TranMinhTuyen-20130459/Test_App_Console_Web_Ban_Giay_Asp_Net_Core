@@ -20,7 +20,10 @@ namespace Test_App_Console
             using (var scope = serviceProvider.CreateScope())
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<MyDbContext>();
-                new DataBrand().AddDataToTable(dbContext);
+                //new DataBrand().AddDataToTable(dbContext);
+                //new DataTypeProduct().AddDataToTable(dbContext);
+
+                new DataSize().AddDataToTable(dbContext);
             }
 
             Console.ReadKey();
