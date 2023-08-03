@@ -27,7 +27,11 @@ namespace Test_App_Console
                 //new DataSize().AddDataToTable(dbContext);
                 //new DataPriceRange().AddDataToTable(dbContext);
 
-                new DataProduct().AddDataToTable(dbContext);
+                //new DataProduct().AddDataToTable(dbContext);
+
+                //DataUtil.PrintArrayList(DataUtil.GetListIdProduct(dbContext));
+
+                new DataImageProduct().AddDataToTable(dbContext);
 
             }
 
