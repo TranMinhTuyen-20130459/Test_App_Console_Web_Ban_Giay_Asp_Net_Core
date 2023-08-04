@@ -23,17 +23,19 @@ namespace Test_App_Console
 
                 //new DataPriceRange().AddDataToTable(dbContext);
 
-                new DataProduct().AddDataToTable(dbContext);
+                //new DataProduct().AddDataToTable(dbContext);
 
                 //DataUtil.PrintArrayList(DataUtil.GetListIdProduct(dbContext));
 
                 //DataUtil.PrintArrayList(DataUtil.GetListNameSize(dbContext));
 
-                new DataImageProduct().AddDataToTable(dbContext);
+                //new DataImageProduct().AddDataToTable(dbContext);
 
-                new DataSizeProduct().AddDataToTable(dbContext);
+                //new DataSizeProduct().AddDataToTable(dbContext);
 
-                new DataHistoryPriceProduct().AddDataToTable(dbContext);
+                //new DataHistoryPriceProduct().AddDataToTable(dbContext);
+
+                new DataOrder().AddDataToTable(dbContext);
 
             }
             catch (Exception ex)
