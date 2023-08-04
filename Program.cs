@@ -35,7 +35,9 @@ namespace Test_App_Console
 
                 //new DataImageProduct().AddDataToTable(dbContext);
 
-                new DataSizeProduct().AddDataToTable(dbContext);
+                //new DataSizeProduct().AddDataToTable(dbContext);
+
+                new DataHistoryPriceProduct().AddDataToTable(dbContext);
 
             }
 
