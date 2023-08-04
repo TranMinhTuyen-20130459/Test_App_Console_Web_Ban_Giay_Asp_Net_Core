@@ -31,7 +31,11 @@ namespace Test_App_Console
 
                 //DataUtil.PrintArrayList(DataUtil.GetListIdProduct(dbContext));
 
-                new DataImageProduct().AddDataToTable(dbContext);
+                //DataUtil.PrintArrayList(DataUtil.GetListNameSize(dbContext));
+
+                //new DataImageProduct().AddDataToTable(dbContext);
+
+                new DataSizeProduct().AddDataToTable(dbContext);
 
             }
 
