@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Web_Ban_Giay_Asp_Net_Core.Data.Class;
+using Web_Ban_Giay_Asp_Net_Core.Data.Util;
 using Web_Ban_Giay_Asp_Net_Core.Entities.Config;
 
 namespace Test_App_Console
@@ -15,36 +16,9 @@ namespace Test_App_Console
 
             try
             {
-                //new DataBrand().AddDataToTable(dbContext);
 
-                //new DataTypeProduct().AddDataToTable(dbContext);
-
-                //new DataSize().AddDataToTable(dbContext);
-
-                //new DataPriceRange().AddDataToTable(dbContext);
-
-                //new DataProduct().AddDataToTable(dbContext);
-
-                //FunctionUtil.PrintArrayList(DataUtil.GetListIdProduct(dbContext));
-
-                //FunctionUtil.PrintArrayList(DataUtil.GetListNameSize(dbContext));
-
-                //new DataImageProduct().AddDataToTable(dbContext);
-
-                //new DataSizeProduct().AddDataToTable(dbContext);
-
-                //new DataHistoryPriceProduct().AddDataToTable(dbContext);
-
-                //new DataOrder().AddDataToTable(dbContext);
-
-                //FunctionUtil.PrintArrayList(DataUtil.GetListIdOrder(dbContext));
-
-                //FunctionUtil.PrintArrayList(
-                //    FunctionUtil
-                //    .GetListElementRandom(DataUtil.GetListIdProduct(dbContext), 3));
-
-                new DataOrderDetail().AddDataToTable(dbContext);
-
+                //AddDataToTable_First(dbContext);
+                AddDataToTable_Second(dbContext);
 
             }
             catch (Exception ex)
@@ -60,6 +34,48 @@ namespace Test_App_Console
             Console.WriteLine("Total time: " + watch.Elapsed.TotalMinutes + " minute");
 
             Console.ReadKey();
+        }
+
+        static void AddDataToTable_First(MyDbContext dbContext)
+        {
+
+            new DataTypeProduct().AddDataToTable(dbContext);
+
+            new DataBrand().AddDataToTable(dbContext);
+
+            new DataSize().AddDataToTable(dbContext);
+
+            new DataPriceRange().AddDataToTable(dbContext);
+
+            new DataOrder().AddDataToTable(dbContext);
+
+        }
+
+        static void AddDataToTable_Second(MyDbContext dbContext)
+        {
+            new DataProduct().AddDataToTable(dbContext);
+
+            new DataImageProduct().AddDataToTable(dbContext);
+
+            new DataSizeProduct().AddDataToTable(dbContext);
+
+            new DataHistoryPriceProduct().AddDataToTable(dbContext);
+
+            new DataOrderDetail().AddDataToTable(dbContext);
+        }
+
+        static void TestFunctionUtil(MyDbContext dbContext)
+        {
+            FunctionUtil.PrintArrayList(DataUtil.GetListIdProduct(dbContext));
+
+            FunctionUtil.PrintArrayList(DataUtil.GetListNameSize(dbContext));
+
+
+            FunctionUtil.PrintArrayList(DataUtil.GetListIdOrder(dbContext));
+
+            FunctionUtil.PrintArrayList(
+                FunctionUtil
+                .GetListElementRandom(DataUtil.GetListIdProduct(dbContext), 3));
         }
 
     }
