@@ -25,9 +25,9 @@ namespace Test_App_Console
 
                 //new DataProduct().AddDataToTable(dbContext);
 
-                //DataUtil.PrintArrayList(DataUtil.GetListIdProduct(dbContext));
+                //FunctionUtil.PrintArrayList(DataUtil.GetListIdProduct(dbContext));
 
-                //DataUtil.PrintArrayList(DataUtil.GetListNameSize(dbContext));
+                //FunctionUtil.PrintArrayList(DataUtil.GetListNameSize(dbContext));
 
                 //new DataImageProduct().AddDataToTable(dbContext);
 
@@ -35,7 +35,16 @@ namespace Test_App_Console
 
                 //new DataHistoryPriceProduct().AddDataToTable(dbContext);
 
-                new DataOrder().AddDataToTable(dbContext);
+                //new DataOrder().AddDataToTable(dbContext);
+
+                //FunctionUtil.PrintArrayList(DataUtil.GetListIdOrder(dbContext));
+
+                //FunctionUtil.PrintArrayList(
+                //    FunctionUtil
+                //    .GetListElementRandom(DataUtil.GetListIdProduct(dbContext), 3));
+
+                new DataOrderDetail().AddDataToTable(dbContext);
+
 
             }
             catch (Exception ex)
