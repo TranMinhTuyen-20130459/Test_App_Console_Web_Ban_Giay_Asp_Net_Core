@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Web_Ban_Giay_Asp_Net_Core.Data.Class;
 using Web_Ban_Giay_Asp_Net_Core.Data.Util;
+using Web_Ban_Giay_Asp_Net_Core.Entities;
 using Web_Ban_Giay_Asp_Net_Core.Entities.Config;
 
 namespace Test_App_Console
@@ -17,8 +18,12 @@ namespace Test_App_Console
             try
             {
 
+                //TestFunctionUtil(dbContext);
+
                 //AddDataToTable_First(dbContext);
-                AddDataToTable_Second(dbContext);
+                //AddDataToTable_Second(dbContext);
+
+                AddDataToTable_Three(dbContext);
 
             }
             catch (Exception ex)
@@ -53,9 +58,17 @@ namespace Test_App_Console
 
         static void AddDataToTable_Second(MyDbContext dbContext)
         {
-            new DataProduct().AddDataToTable(dbContext);
+            new DataProductShoes().AddDataToTable(dbContext);
 
-            new DataImageProduct().AddDataToTable(dbContext);
+            new DataImageProductShoes().AddDataToTable(dbContext);
+
+        }
+
+        static void AddDataToTable_Three(MyDbContext dbContext)
+        {
+            new DataProductSportsWear().AddDataToTable(dbContext);
+
+            new DataImageProductSportsWear().AddDataToTable(dbContext);
 
             new DataSizeProduct().AddDataToTable(dbContext);
 
@@ -66,16 +79,21 @@ namespace Test_App_Console
 
         static void TestFunctionUtil(MyDbContext dbContext)
         {
-            FunctionUtil.PrintArrayList(DataUtil.GetListIdProduct(dbContext));
+            //FunctionUtil.PrintArrayList(DataUtil.GetListIdProduct(dbContext));
 
-            FunctionUtil.PrintArrayList(DataUtil.GetListNameSize(dbContext));
+            //FunctionUtil.PrintArrayList(DataUtil.GetListNameSize(dbContext));
 
 
-            FunctionUtil.PrintArrayList(DataUtil.GetListIdOrder(dbContext));
+            //FunctionUtil.PrintArrayList(DataUtil.GetListIdOrder(dbContext));
 
-            FunctionUtil.PrintArrayList(
-                FunctionUtil
-                .GetListElementRandom(DataUtil.GetListIdProduct(dbContext), 3));
+            //FunctionUtil.PrintArrayList(
+            //    FunctionUtil
+            //    .GetListElementRandom(DataUtil.GetListIdProduct(dbContext), 3));
+
+
+            FunctionUtil.PrintArrayList(DataUtil.GetListIdProductByType(dbContext, (int)TypeProductEnum.GIAY));
+            FunctionUtil.PrintArrayList(DataUtil.GetListIdProductByType(dbContext, (int)TypeProductEnum.DO_THE_THAO));
+
         }
 
     }
