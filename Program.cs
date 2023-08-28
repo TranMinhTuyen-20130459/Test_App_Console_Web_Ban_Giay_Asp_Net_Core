@@ -44,6 +44,8 @@ namespace Test_App_Console
         static void AddDataToTable_First(MyDbContext dbContext)
         {
 
+            new DataUser().AddDataToTable(dbContext);
+
             new DataTypeProduct().AddDataToTable(dbContext);
 
             new DataBrand().AddDataToTable(dbContext);
@@ -52,7 +54,7 @@ namespace Test_App_Console
 
             new DataPriceRange().AddDataToTable(dbContext);
 
-            new DataOrder().AddDataToTable(dbContext);
+            //new DataOrder().AddDataToTable(dbContext);
 
         }
 
@@ -74,7 +76,7 @@ namespace Test_App_Console
 
             new DataHistoryPriceProduct().AddDataToTable(dbContext);
 
-            new DataOrderDetail().AddDataToTable(dbContext);
+            //new DataOrderDetail().AddDataToTable(dbContext);
         }
 
         static void TestFunctionUtil(MyDbContext dbContext)
