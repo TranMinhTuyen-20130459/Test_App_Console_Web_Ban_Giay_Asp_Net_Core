@@ -21,9 +21,9 @@ namespace Test_App_Console
                 //TestFunctionUtil(dbContext);
 
                 //AddDataToTable_First(dbContext);
-                //AddDataToTable_Second(dbContext);
+                AddDataToTable_Second(dbContext);
 
-                AddDataToTable_Three(dbContext);
+                //AddDataToTable_Three(dbContext);
 
             }
             catch (Exception ex)
