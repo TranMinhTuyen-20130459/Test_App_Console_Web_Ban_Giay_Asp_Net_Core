@@ -8,19 +8,19 @@ namespace Test_App_Console.Data
         public static void AddDataToTable_First(MyDbContext dbContext)
         {
 
-            new DataUser().AddDataToTable(dbContext);
+            /* new DataUser().AddDataToTable(dbContext);
 
-            new DataAdmin().AddDataToTable(dbContext);
+             new DataAdmin().AddDataToTable(dbContext);
 
-            new DataTypeProduct().AddDataToTable(dbContext);
+             new DataTypeProduct().AddDataToTable(dbContext);
 
-            new DataBrand().AddDataToTable(dbContext);
+             new DataBrand().AddDataToTable(dbContext);
 
-            new DataSize().AddDataToTable(dbContext);
+             new DataSize().AddDataToTable(dbContext);
 
-            new DataPriceRange().AddDataToTable(dbContext);
-
-            // new DataOrder().AddDataToTable(dbContext);
+             new DataPriceRange().AddDataToTable(dbContext);
+ */
+            new DataOrder().AddDataToTable(dbContext);
 
         }
 
