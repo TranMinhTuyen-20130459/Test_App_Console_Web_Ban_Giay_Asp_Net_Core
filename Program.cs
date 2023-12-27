@@ -15,9 +15,9 @@ namespace Test_App_Console
 
             try
             {
-                DataUtils.AddDataToTable_First(dbContext);
-                // DataUtils.AddDataToTable_Second(dbContext);
-                // DataUtils.AddDataToTable_Three(dbContext);
+                //DataUtils.AddDataToTable_First(dbContext);
+                //DataUtils.AddDataToTable_Second(dbContext);
+                DataUtils.AddDataToTable_Three(dbContext);
             }
             catch (Exception ex)
             {
