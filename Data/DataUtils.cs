@@ -37,7 +37,7 @@ namespace Test_App_Console.Data
         public static void AddDataToTable_Three(MyDbContext dbContext)
         {
 
-            new DataSizeProduct().AddDataToTable(dbContext);
+            // new DataSizeProduct().AddDataToTable(dbContext);
 
             new DataOrder().AddDataToTable(dbContext);
         }
