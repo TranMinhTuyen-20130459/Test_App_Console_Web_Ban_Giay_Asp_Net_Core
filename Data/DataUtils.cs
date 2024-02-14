@@ -7,7 +7,6 @@ namespace Test_App_Console.Data
     {
         public static void AddDataToTable_First(MyDbContext dbContext)
         {
-
             new DataUser().AddDataToTable(dbContext);
 
             new DataAdmin().AddDataToTable(dbContext);
@@ -30,15 +29,12 @@ namespace Test_App_Console.Data
         public static void AddDataToTable_Second(MyDbContext dbContext)
         {
             new DataProductShoes().AddDataToTable(dbContext);
-
             new DataImageProductShoes().AddDataToTable(dbContext);
         }
 
         public static void AddDataToTable_Three(MyDbContext dbContext)
         {
-
-            // new DataSizeProduct().AddDataToTable(dbContext);
-
+            new DataSizeProduct().AddDataToTable(dbContext);
             new DataOrder().AddDataToTable(dbContext);
         }
     }

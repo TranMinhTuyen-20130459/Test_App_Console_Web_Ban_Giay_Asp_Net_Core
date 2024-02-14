@@ -30,7 +30,6 @@ namespace Test_App_Console
 
             watch.Stop();
             Console.WriteLine("Total time: " + watch.Elapsed.TotalMinutes + " minute");
-
             Console.ReadKey();
         }
     }
